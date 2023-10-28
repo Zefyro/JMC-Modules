@@ -1,0 +1,20 @@
+JMC.python(`
+import math
+
+def rainbowGradiant(i):
+    frequency = 0.10
+    red   = math.sin(frequency*i + 0) * 107 + 148
+    green = math.sin(frequency*i + 2) * 107 + 148
+    blue  = math.sin(frequency*i + 4) * 107 + 148
+    return (math.floor(max(0,min(255,red))) << 16) + (max(0,min(255,math.floor(green))) << 8) + math.floor(max(0,min(255,blue)))
+
+def rainbowColor(text, time = 0):
+    displayName = []
+    for idx, char in enumerate(text):
+        x = {
+            "text": char,
+            "color": f'{hex(rainbowGradiant(((time-idx*3+60)%60)+1))}'.replace('0x','#')
+        }
+        displayName.append(x)
+    return str(displayName).replace("'", '"')
+`, "colors");
