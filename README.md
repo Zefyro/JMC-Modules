@@ -6,7 +6,7 @@
 
 ##### Colors
 
-The provided JMC module defines a Python function named `rainbowColor` that takes a `text` string and an optional `time` parameter (defaulting to 0) as input and generates an array of characters, each associated with a rainbow color determined by rainbowGradiant. The output is a JSON-like string representation of this array. It utilizes the math module to perform trigonometric calculations and produces a color with changing shades of red, green, and blue.
+The provided JMC module defines a Python function named `rainbowColor` that takes a `text` string and an optional `time` parameter (defaulting to 0) as input and generates an array of characters, each associated with a rainbow color determined by `rainbowGradiant`. The output is a JSON-like string representation of this array. It utilizes the math module to perform trigonometric calculations and produces a color with changing shades of red, green, and blue.
 
 ```js
 import "colors.jmc";
